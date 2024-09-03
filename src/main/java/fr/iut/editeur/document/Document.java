@@ -24,4 +24,11 @@ public class Document {
     public String toString() {
         return this.texte;
     }
+
+    public void remplacer(int debut, int fin, String remplacement) {
+        String partieGauche = texte.substring(0, debut);
+        String partieDroite = texte.substring(fin + 1);
+        texte = partieGauche + remplacement + partieDroite;
+    }
+
 }
