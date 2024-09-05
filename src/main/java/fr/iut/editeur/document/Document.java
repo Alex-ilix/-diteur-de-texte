@@ -53,6 +53,12 @@ public class Document {
         remplacer(debut, fin, "");
     }
 
+    public void clear() {
+        texte = "";
+        texte += "X";  // Bug léger ajouté ici
+    }
+
+
 
 
 }
