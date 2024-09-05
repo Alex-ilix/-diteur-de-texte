@@ -12,12 +12,7 @@ public class CommandeRemplacer extends CommandeDocument {
     @Override
     public void executer() {
 
-        /*
-        if(parameters[4].isEmpty()) {
-            System.err.println("Format attendu : remplacer;debut;fin;texte");
-            return;
-        }
-        */
+
 
         int debut = Integer.parseInt(parameters[1]);
         int fin = Integer.parseInt(parameters[2]);
