@@ -55,8 +55,14 @@ public class Document {
 
     public void clear() {
         texte = "";
-        texte += "X";  // Bug léger ajouté ici
     }
+
+    public void inserer(int debut, String texte) {
+        String partieGauche = this.texte.substring(0, debut);
+        String partieDroite = this.texte.substring(debut);
+        this.texte = partieGauche + texte + partieDroite;
+    }
+
 
 
 
