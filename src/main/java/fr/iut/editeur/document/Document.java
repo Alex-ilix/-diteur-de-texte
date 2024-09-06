@@ -2,51 +2,51 @@ package fr.iut.editeur.document;
 
 public class Document {
 
-    private String texte;
+    private String texteDocument;
 
     public Document() {
-        this.texte = "";
+        this.texteDocument = "";
     }
 	
-    public String getTexte() {
-        return texte;
+    public String getTexteDocument() {
+        return texteDocument;
     }
 
-    public void setTexte(String texte) {
-        this.texte = texte;
+    public void setTexteDocument(String texteDocument) {
+        this.texteDocument = texteDocument;
     }
 
     public void ajouter(String texte) {
-        this.texte += texte;
+        this.texteDocument += texte;
     }
 
     @Override
     public String toString() {
-        return this.texte;
+        return this.texteDocument;
     }
 
     public void remplacer(int debut, int fin, String remplacement) {
-        String partieGauche = texte.substring(0, debut);
-        String partieDroite = texte.substring(fin + 1);
-        texte = partieGauche + remplacement + partieDroite;
+        String partieGauche = texteDocument.substring(0, debut);
+        String partieDroite = texteDocument.substring(fin + 1);
+        texteDocument = partieGauche + remplacement + partieDroite;
     }
 
     public void majuscules(int debut, int fin) {
         // Vérification des indices pour s'assurer qu'ils sont valides
-        if (debut < 0 || fin >= texte.length() || debut > fin) {
+        if (debut < 0 || fin >= texteDocument.length() || debut > fin) {
             throw new IllegalArgumentException("Indices invalides.");
         }
 
         // Extraire la portion du texte à convertir en majuscules
-        String partieAMettreEnMajuscules = texte.substring(debut, fin + 1);
+        String partieAMettreEnMajuscules = texteDocument.substring(debut, fin + 1);
 
         // Convertir la portion en majuscules
         String partieMajuscules = partieAMettreEnMajuscules.toUpperCase();
 
         // Construire le nouveau texte
-        String partieGauche = texte.substring(0, debut);
-        String partieDroite = texte.substring(fin + 1);
-        texte = partieGauche + partieMajuscules + partieDroite;
+        String partieGauche = texteDocument.substring(0, debut);
+        String partieDroite = texteDocument.substring(fin + 1);
+        texteDocument = partieGauche + partieMajuscules + partieDroite;
     }
 
     public void effacer(int debut, int fin) {
@@ -54,17 +54,17 @@ public class Document {
     }
 
     public void clear() {
-        texte = "";
+        texteDocument = "";
     }
 
     public void inserer(int debut, String texte) {
-        String partieGauche = this.texte.substring(0, debut);
-        String partieDroite = this.texte.substring(debut);
-        this.texte = partieGauche + texte + partieDroite;
+        String partieGauche = this.texteDocument.substring(0, debut);
+        String partieDroite = this.texteDocument.substring(debut);
+        this.texteDocument = partieGauche + texte + partieDroite;
     }
 
     public void minuscules(int debut, int fin) {
-        remplacer(debut, fin, texte.substring(debut, fin + 1).toLowerCase());
+        remplacer(debut, fin, texteDocument.substring(debut, fin + 1).toLowerCase());
     }
 
 
