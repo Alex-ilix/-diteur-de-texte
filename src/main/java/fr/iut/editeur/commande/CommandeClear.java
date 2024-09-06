@@ -13,5 +13,10 @@ public class CommandeClear extends CommandeDocument {
         document.clear();
         super.executer();
     }
+
+    @Override
+    public String getDescriptionCommande() {
+        return "Efface tout le contenu du document.";
+    }
 }
 

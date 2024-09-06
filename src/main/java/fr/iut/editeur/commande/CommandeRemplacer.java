@@ -21,4 +21,9 @@ public class CommandeRemplacer extends CommandeDocument {
         super.executer();
     }
 
+    @Override
+    public String getDescriptionCommande() {
+        return "Remplace une portion du texte entre deux positions données par une nouvelle chaîne de caractères.";
+    }
+
 }
