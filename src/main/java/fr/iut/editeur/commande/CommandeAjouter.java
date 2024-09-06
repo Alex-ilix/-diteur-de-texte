@@ -20,4 +20,9 @@ public class CommandeAjouter extends CommandeDocument {
         super.executer();
     }
 
+    @Override
+    public String getDescriptionCommande() {
+        return "Ajoute une chaîne de caractères à la fin du document.";
+    }
+
 }

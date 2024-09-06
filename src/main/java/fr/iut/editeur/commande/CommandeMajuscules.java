@@ -18,4 +18,9 @@ public class CommandeMajuscules extends CommandeDocument {
         super.executer();
     }
 
+    @Override
+    public String getDescriptionCommande() {
+        return "Met en majuscules une portion du texte entre deux positions données.";
+    }
+
 }
