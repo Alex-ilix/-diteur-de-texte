@@ -63,6 +63,10 @@ public class Document {
         this.texte = partieGauche + texte + partieDroite;
     }
 
+    public void minuscules(int debut, int fin) {
+        remplacer(debut, fin, texte.substring(debut, fin + 1).toLowerCase());
+    }
+
 
 
 
