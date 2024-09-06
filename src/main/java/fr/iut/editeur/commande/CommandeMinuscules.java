@@ -15,4 +15,9 @@ public class CommandeMinuscules extends CommandeDocument {
         document.minuscules(debut, fin);
         super.executer();
     }
+
+    @Override
+    public String getDescriptionCommande() {
+        return "Met en minuscules une portion du texte entre deux positions données.";
+    }
 }
