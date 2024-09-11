@@ -16,6 +16,8 @@ public class Document {
         this.texteDocument = texteDocument;
     }
 
+
+
     public void ajouter(String texte) {
         this.texteDocument += texte;
     }
